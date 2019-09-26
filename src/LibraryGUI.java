@@ -1,12 +1,9 @@
-import javax.swing.JFrame;
 
-public class LibraryGUI extends JFrame {
-	
-	
+public class LibraryGUI {
 
 	public static void main(String[] args) {
 		
-		
+		new gui();
 
 	}
 
