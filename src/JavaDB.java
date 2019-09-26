@@ -15,12 +15,12 @@ public class JavaDB {
 		
 		try {
 			
-			Class.forName("org.gjt.mm.mysql.Driver").newInstance();
-			con = DriverManager.getConnection("jdbc:mysql://" + host + "/" + database, user, password);
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+			con = DriverManager.getConnection("jdbc:mysql://" + host + "/" + database + "?useTimezone=true&serverTimezone=UTC", user, password);
 			
 		}catch(Exception error) {
 			
-			JOptionPane.showMessageDialog(null, error);
+			System.out.println(error);
 			
 		}
 		
